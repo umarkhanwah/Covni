@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Patient</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body class="container-fluid ">
+    <section class="container-fluid p-0">
+        <style>
+            * {
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+
+            .Dash_chip_ul ul {
+
+                padding: 10px;
+                transition: 0.5s;
+            }
+
+            .Dash_chip_ul ul li {
+                list-style-type: none;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.311);
+                padding: 10px;
+                transition: 0.5s;
+            }
+
+            .Dash_chip_ul ul li a {
+                text-decoration: none;
+                color: rgb(0, 0, 0);
+
+            }
+
+            .Dash_chip_ul ul li:hover {
+                list-style-type: none;
+                text-decoration: none;
+                background: #ffffff;
+                color: rgb(0, 0, 0);
+                padding: 10px;
+            }
+
+            .Dash_chip_ul ul li:hover a {
+
+                color: rgb(0, 0, 0);
+                padding: 10px;
+            }
+
+            .Dash_chips {
+                background: #f2f2f2;
+                padding: 10px 50px;
+                transition: 0.5s;
+                box-shadow: 0px 0px 10px 1px #0000007e;
+            }
+
+            .Dash_chips:hover {
+                padding: 15px 60px;
+                border-radius: 10px;
+                box-shadow: 0px 0px 50px 1px #000000;
+            }
+        </style>
+        <div class="row">
+            <div style="background-color: #f2f2f2; " class="col-lg-3 Dash_chip_ul pt-4">
+                <h3 class="p-0 m-0">Admin <h6>Dashboard</h6>
+                </h3>
+                <hr class="m-0 mt-2">
+                <ul>
+                    <li><a href="">Hospital Registration <i class="fa-solid fa-registered float-end"></i></a></li>
+                    <li><a href="/panels/listofpatient.html">List of Hospital <i
+                                class="fa-solid fa-hospital float-end"></i></a></li>
+                    <li><a href="/panels/listofpatient.html">List of Patient <i
+                                class="fa-solid fa-bed float-end"></i></a></li>
+                </ul>
+                <h3 class="mt-5">Vaccine</h3>
+                <hr class="m-0 mt-2">
+                <ul>
+                    <li><a href="">List of Vaccine <i class="fa-solid fa-syringe float-end"></i></a></li>
+                    <li><a href="">Add new vaccine <i class="fa-solid fa-plus float-end"></i></a></li>
+                    <li><a href="">Stock Updates <i class="fas fa-inventory"></i></a></li>
+                    <li><a href="">Stock Summary </a></li>
+                    <li><a href="">Issuance of vaccine</a></li>
+                    <li><a href="">Rollback Vaccine</a></li>
+                </ul>
+            </div>
+
+
+            <div class="col-lg-9  mb-5">
+                <div class="row">
+                    <style>
+                        .loginAS_head {
+                            color: rgb(0, 0, 0);
+                            font-size: 1.5rem;
+                            text-align: left;
+                        }
+
+                        .P_btn_login {
+                            border-radius: 10px;
+                            /* padding: 0px 10px; */
+                            border: 2px solid #FF6969;
+                            font-weight: 900;
+                            /* color: white; */
+                            transform: skew(10deg);
+                            transition: 0.5s;
+                        }
+
+                        .P_btn_login:hover {
+                            border-radius: 10px;
+                            background: #FF6969;
+                            /* border: 20px solid #ffffff; */
+                            box-shadow: 0px 0px 50px 1px #FF6969;
+                            transform: scale(1.05) skew(0deg);
+                        }
+
+                        .P_btn_login_active {
+                            border-radius: 10px;
+                            /* padding: 0px 10px; */
+                            border: 2px solid #FF6969;
+                            font-weight: 900;
+                            color: white;
+                            transform: skew(10deg);
+                            transition: 0.5s;
+                            background: #FF6969;
+                        }
+
+                        .P_btn_FI {
+                            border: 2px solid #FF6969;
+                            border-radius: 40px;
+                            width: 20vw;
+                        }
+
+                        .form-label {
+                            color: black;
+                            padding: 0;
+                        }
+
+                        .result_positive {
+                            background: greenyellow;
+                        }
+
+                        .result_negative {
+                            background: red;
+                            color: white;
+                        }
+                    </style>
+                    <div class="row mt-4">
+                        <div class="col-lg-6">
+                            <h6 class="loginAS_head mb-3"><i
+                                    class="fa fa-arrow-left border-end border-black bg-dark text-light rounded-pill p-2 "></i>
+                                <b class="border-start border-5 ms-5 ps-5" style="color: #FF6969;">List of Vaccine </b>
+                            </h6>
+
+                        </div>
+                        <div class="col-lg-6 float-end">
+                            <h6 class=" mt-2 float-end">Total Vaccine : <span style="font-weight: bold;">600</span></h6>
+
+                        </div>
+                    </div>
+
+
+                    <hr style="color: rgb(0, 0, 0);">
+                    <div class="row px-5">
+                        <div class="col-12 mt-5 pt-5 d-flex justify-content-center">
+                            <form method="POST" action="{{ route('vaccine.store') }}">
+                                @csrf
+                                <div class="mb-3">
+                                    <div class="dropdown">
+                                        <!-- <button class="btn P_btn_FI btn-light dropdown-toggle" type="button"
+                                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                            Select Vaccine
+                                        </button>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                            <li><a class="dropdown-item" href="#">Action</a></li>
+                                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                        </ul> -->
+                                        <input type="text" placeholder="Enter Vaccine Name" class="form-control P_btn_FI  dropdown-toggle" id="name" name="name" required>
+            
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <!-- <input type="number" class="form-control P_btn_FI" id="exampleInputPassword1"
+                                        placeholder="Qty"> -->
+                                    <input type="number" class="form-control P_btn_FI" id="quantity" name="quantity" placeholder="Qty" required>
+            
+                                </div>
+                                <button type="submit" class="btn float-end P_btn_login">Add Vaccine in stock</button>
+                            </form>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+    </section>
+    </div>
+    </div>
+    </section>
+</body>
+
+</html>

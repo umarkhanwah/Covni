@@ -1,0 +1,1108 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Covni</title>
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- animaiton -->
+    <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
+
+    <style>
+        /* Importing Google font - Open Sans */
+
+        @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap");
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Open Sans", sans-serif;
+        }
+
+        body {
+            /* height: 100vh; */
+            width: 100%;
+            background: linear-gradient(to bottom, #ff7171 23%, #330c43 95%);
+            background: linear-gradient(to bottom, #175d69 23%, #330c43 95%);
+            font-family: Poppins, sans-serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px 15px;
+        }
+
+        .navbar .logo a {
+            font-size: 1.8rem;
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .navbar .links {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            gap: 35px;
+        }
+
+        .navbar .links a {
+            font-weight: 500;
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 0;
+            transition: 0.2s ease;
+        }
+
+        .navbar .links a:hover {
+            color: #ff7171;
+        }
+
+        .navbar .buttons a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1rem;
+            padding: 15px 0;
+            transition: 0.2s ease;
+        }
+
+        .navbar .buttons a:not(:last-child) {
+            margin-right: 30px;
+        }
+
+        .navbar .buttons .signin:hover {
+            color: #ff7171;
+        }
+
+        .navbar .buttons .signup {
+            border: 1px solid #fff;
+            padding: 10px 20px;
+            border-radius: 0.375rem;
+            text-align: center;
+            transition: 0.2s ease;
+        }
+
+        .navbar .buttons .signup:hover {
+            background-color: #ff7171;
+            color: #fff;
+        }
+
+        .hero-section {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 97vh;
+            padding: 0 15px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero-section .hero {
+            max-width: 50%;
+            color: #fff;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #c9c7c7;
+        }
+
+        .hero-section .img img {
+            width: 517px;
+        }
+
+        .hero-section .buttons {
+            margin-top: 40px;
+        }
+
+        .hero-section .buttons a {
+            text-decoration: none;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 0.375rem;
+            font-weight: 600;
+            transition: 0.2s ease;
+            display: inline-block;
+        }
+
+        .hero-section .buttons a:not(:last-child) {
+            margin-right: 15px;
+        }
+
+        .buttons .join {
+            background-color: #ff7171;
+        }
+
+        .hero-section .buttons .learn {
+            border: 1px solid #fff;
+            border-radius: 0.375rem;
+        }
+
+        .hero-section .buttons a:hover {
+            background-color: #ff7171;
+        }
+
+        /* Hamburger menu styles */
+
+        #menu-toggle {
+            display: none;
+        }
+
+        #hamburger-btn {
+            font-size: 1.8rem;
+            color: #fff;
+            cursor: pointer;
+            display: none;
+            order: 1;
+        }
+
+        @media screen and (max-width: 1023px) {
+            .navbar .logo a {
+                font-size: 1.5rem;
+            }
+
+            .links {
+                position: fixed;
+                left: -100%;
+                top: 75px;
+                width: 100%;
+                height: 100vh;
+                padding-top: 50px;
+                background: #175d69;
+                flex-direction: column;
+                transition: 0.3s ease;
+            }
+
+            .navbar #menu-toggle:checked~.links {
+                left: 0;
+            }
+
+            .navbar #hamburger-btn {
+                display: block;
+            }
+
+            .header .buttons {
+                display: none;
+            }
+
+            .hero-section .hero {
+                max-width: 100%;
+                text-align: center;
+            }
+
+            .hero-section img {
+                display: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <header style class="header">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Montserrat:ital,wght@0,100;0,500;1,200&display=swap');
+
+            .logo_covni {
+                letter-spacing: 5px;
+                font-weight: 900;
+                font-family: 'Cairo', sans-serif;
+                text-shadow: 0px 0px 100px white;
+                color: #d80000;
+                font-size: 5rem;
+                z-index: 100;
+                transform: scale(1.5);
+                /* font-family: 'Montserrat', sans-serif; */
+            }
+
+            .logo_covni a {
+                color: #ff7171;
+                font-size: 5rem;
+                /* font-family: 'Montserrat', sans-serif; */
+            }
+        </style>
+
+        <style>
+            .header {
+                /* background-color: rgba(51, 51, 51, 0.8); */
+                /* Initial background with transparency */
+                color: #fff;
+                transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+                z-index: 100;
+                backdrop-filter: blur(0px);
+                /* Initial blur amount */
+            }
+
+            .header.scrolled {
+                background-color: rgba(0, 0, 0, 0.546);
+                /* Background color on scroll with more opacity */
+                color: #333;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+                backdrop-filter: blur(10px);
+                /* Increase blur amount on scroll */
+                margin: 10px 0px 10px 0px;
+                border-radius: 100px;
+            }
+        </style>
+        <script>// Get a reference to the header element
+            // Get a reference to the header and container elements
+            const header = document.querySelector('.header');
+            const container = document.querySelector('.container');
+
+            // Function to add or remove the "scrolled" class based on scroll position
+            function toggleHeaderAndContainerClass() {
+                if (window.scrollY > 0) {
+                    header.classList.add('scrolled');
+                    container.classList.add('scrolled-container'); // Add your custom class name
+                } else {
+                    header.classList.remove('scrolled');
+                    container.classList.remove('scrolled-container'); // Remove your custom class name
+                }
+            }
+
+            // Listen for the "scroll" event and call the toggleHeaderAndContainerClass function
+            window.addEventListener('scroll', toggleHeaderAndContainerClass);
+        </script>
+
+        <nav class="navbar">
+            <h2 class="logo bg- px-3 py-1"><a style="color: #ff7171; font-size: 2.2rem;" class="logo_covni"
+                    href="#">Cov<span style="color: #ffffff; font-weight: 500; ">ni</span></a></h2>
+            <input type="checkbox" id="menu-toggle" />
+            <label for="menu-toggle" id="hamburger-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
+                    <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </label>
+            <ul class="links ">
+                <li><a href="">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                @if(Auth::guard('hospital')->check() || Auth::guard('user')->check() || Auth::guard('admin')->check())
+                    <!-- <li>
+                        <a class="{{ request()->is('tests') ? 'active' : '' }}" href="/tests" >Tests</a>
+                    </li> -->
+                    <!-- <li>
+                        <a class="{{ request()->is('tests') ? 'active' : '' }}" href="/tests" >Tests</a>
+                    </li> -->
+                    <li>
+                        <a class="{{ request()->is('/dashboard') ? 'active' : '' }}" href="/dashboard" >Dashboard</a>
+                    </li>
+                @endif
+                <!-- @if(Auth::guard('user')->check())
+               
+                    <li>
+                            <a class="{{ request()->is('/dashboard') ? 'active' : '' }}" href="/" >Dashboard</a>
+                    </li> -->
+                 <!-- <li>
+                        <a class="{{ request()->is('booktiming') ? 'active' : '' }}" href="/booktiming" >Take Appointment</a>
+                    </li>
+                    <li>
+                        <a class="{{ request()->is('booked_records') ? 'active' : '' }}" href="/booked_records" >Booked Records</a>
+                    </li>
+                    <li>
+                        <a class="{{ request()->is('myreports') ? 'active' : '' }}" href="/myreports" >See reports</a>
+                    </li>
+                    <li>
+                        <a class="{{ request()->is('u_vaccines') ? 'active' : '' }}" href="/u_vaccines" >Vaccines</a>
+                    </li>
+                    <li>
+                    <a class="{{ request()->is('myvaccines') ? 'active' : '' }}" href="/myvaccines" >My Vaccines</a>
+                    </li> -->
+                <!-- @endif -->
+                <!-- @if(Auth::guard('admin')->check())
+                    <li>
+                        <a class="{{ request()->is('/dashboard') ? 'active' : '' }}" href="/" >Dashboard</a>
+                    </li> -->
+                    <!-- <li>
+                    <a class="{{ request()->is('vaccine/create') ? 'active' : '' }}" href="/vaccine/create" >Add a Vaccine</a>
+                    </li>
+                    <li>
+                    <a class="{{ request()->is('vaccine/list') ? 'active' : '' }}" href="/vaccine/list" >Issue Vaccines</a>
+                    </li>
+                    <li>
+                    <a class="{{ request()->is('admin/vaccine/list') ? 'active' : '' }}" href="/admin/vaccine/list" >Vaccines List</a>
+                    </li>
+                     -->
+                <!-- @endif -->
+                <!-- <li><a href="#">Portfolio</a></li> -->
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="buttons">
+            @if(Auth::guard('user')->check() || Auth::guard('admin')->check() || Auth::guard('hospital')->check())
+                        <div class="dropdown">
+
+                        <a href="#dropdown" class="nav-link active dropdown-toggle" type="button" id="triggerId" data-bs-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            
+                            @auth('hospital')
+                                {{ auth('hospital')->user()->name }}
+                            @endauth
+                            @auth('user')
+                                {{ auth('user')->user()->name }}
+                            @endauth
+                            @auth('admin')
+                                {{ auth('admin')->user()->name }}
+                            @endauth
+                            
+                        </a>
+                        <div class="dropdown-menu " aria-labelledby="triggerId" id="dropdown">
+                            @auth('hospital')
+                                <a href="{{route('h_edit',auth('hospital')->user()->id)}}" class="dropdown-item text-dark text-center" href="#">Edit Profile</a>
+                                <a href="/h_logout" class="dropdown-item text-dark text-center">Logout</a>
+                                @endauth
+                                @auth('user')
+                                <a href="{{route('u_edit',auth('user')->user()->id)}}" class="dropdown-item text-dark text-center" href="#">Edit Profile</a>
+                                <a href="/u_logout" class="dropdown-item text-dark text-center">Logout</a>
+                                @endauth
+                                @auth('admin')
+                                <a href="{{route('u_edit',auth('admin')->user()->id)}}" class="dropdown-item text-dark text-center" href="#">Edit Profile</a>
+                                <a href="/a_logout" class="dropdown-item text-dark text-center">Logout</a>
+                            @endauth
+                            
+                            
+                        </div>   
+                                </div>
+<!-- <ul class="list" >
+   
+    @auth('hospital')
+        <li href="{{route('h_edit',auth('hospital')->user()->id)}}" class="dropdown-item" href="#">Edit Profile</li>
+        <a href="/h_logout" class="dropdown-item">Logout</a>
+        @endauth
+        @auth('user')
+        <li href="{{route('u_edit',auth('user')->user()->id)}}" class="dropdown-item" href="#">Edit Profile</li>
+        <a href="/u_logout" class="dropdown-item">Logout</a>
+        @endauth
+        @auth('admin')
+        <li href="{{route('u_edit',auth('admin')->user()->id)}}" class="dropdown-item" href="#">Edit Profile</li>
+        <a href="/a_logout" class="dropdown-item">Logout</a>
+    @endauth
+    
+    
+</ul>    -->
+<!-- {{-- @yield('dropdown') --}} -->
+@else
+<a href="/allroles" class="signin">Sign In</a>
+<a href="/user" class="signup">Sign Up</a>
+@endif  
+            </div>
+        </nav>
+    </header>
+
+    <!-- hero section -->
+    <section class="hero-section">
+        <div class="hero" >
+            <h2 style="text-shadow: 0px 10px 10px black; ">COVID Test & Vaccination Booking System</h2>
+            <!-- <h2 style="text-shadow: 0px 10px 10px black;">COVID Test & Vaccination Booking System</h2> -->
+            <p style=" ">
+                We connect patients with hospitals for COVID-19 testing and vaccination appointments.
+            </p>
+            <div class="buttons">
+                <a style="background-color: #ff7171;" href="/booktiming" class="join">Book
+                    a Test </a>
+                <a href="/u_vaccines" class="learn">Schedule Vaccination</a>
+            </div>
+        </div>
+        <div class="img">
+            <!-- <img src="https://www.codingnepalweb.com/demos/create-responsive-website-html-css/hero-bg.png" alt="hero image" /> -->
+            <img style="opacity: 1;" src="/imgs/type-coronavirus-test_23-2148560270-removebg-preview.png"
+                alt="hero image" />
+        </div>
+    </section>
+
+    <!-- Symptoms -->
+    <!-- <section class="section_4 bg-dark text-light container-fluid p- m-0 py-5">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
+            .symptom {
+                margin-bottom: 20px;
+                padding: 10px;
+                transition: 0.5s;
+                background-color: rgba(0, 0, 0, 0.546);
+                color: #ffffff;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.888);
+                backdrop-filter: blur(1px);
+                margin: 10px 0px 10px 0px;
+            }
+
+            .symptom:hover {
+                background: #FF6969;
+            }
+
+            .symptom h2 {
+                font-size: 24px;
+                font-family: 'Dosis', sans-serif;
+            }
+            
+            .symptom p {
+                font-size: 16px;
+            }
+            
+            .symptom_heading {
+                color: white;
+                font-family: 'Dosis', sans-serif;
+            }
+        </style>
+        <style>
+            .section_4 {
+                background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url(https://images.pexels.com/photos/3992933/pexels-photo-3992933.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+                background-size: cover;
+                background-position: center;
+                background-position: bottom;
+                background-attachment: fixed;
+            }
+
+            .form-control,
+            .btn {
+                border-radius: 0%;
+            }
+        </style>
+        <h1 class="symptom_heading">COVID-19 Symptoms</h1>
+        <hr>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="symptom">
+                    <h2>Fever</h2>
+                    <p>High body temperature, often accompanied by chills.</p>
+                </div>
+                <div class="symptom">
+                    <h2>Cough</h2>
+                    <p>A dry or productive cough, sometimes with mucus.</p>
+                </div>
+                <div class="symptom">
+                    <h2>Shortness of Breath</h2>
+                    <p>Difficulty breathing, especially when active.</p>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="symptom">
+                    <h2>Fatigue</h2>
+                    <p>Feeling extremely tired or lethargic.</p>
+                </div>
+                <div class="symptom">
+                    <h2>Loss of Taste or Smell</h2>
+                    <p>Not being able to taste or smell things.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <section class="section_3  container-fluid p-0 m-0">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap');
+
+            .symptom {
+                margin-bottom: 20px;
+                padding: 10px;
+                /* border: 1px solid #ccc; */
+                transition: 0.5s;
+                background-color: rgba(0, 0, 0, 0.546);
+                /* Background color on scroll with more opacity */
+                color: #ffffff;
+                box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.888);
+                backdrop-filter: blur(1px);
+                /* Increase blur amount on scroll */
+                margin: 10px 0px 10px 0px;
+            }
+
+            .symptom:hover {
+                background: #FF6969;
+                transform: scale(1.01);
+            }
+
+            .symptom h2 {
+                font-size: 24px;
+                font-family: 'Dosis', sans-serif;
+                text-shadow: 10px 10px 10px rgb(0, 0, 0);
+            }
+
+            .symptom p {
+                font-size: 16px;
+            }
+
+            .symptom_heading {
+                color: white;
+                font-family: 'Dosis', sans-serif;
+                text-shadow: 10px 10px 10px rgb(0, 0, 0);
+            }
+        </style>
+        <style>
+            .section_3 {
+                /* background-image: linear-gradient(rgb(0 76 141), #00000055), url(https://images.pexels.com/photos/6653236/pexels-photo-6653236.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1); */
+                /* background-image: linear-gradient( #0000008c), url(https://images.pexels.com/photos/3735769/pexels-photo-3735769.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2); */
+                background-image: linear-gradient(#FF6969, #0000008c);
+                background-size: cover;
+                background-position: center;
+                background-position: bottom;
+                background-attachment: fixed;
+            }
+
+            .trusted_h3 {
+                font-size: 3.75rem;
+                color: #FF6969;
+                font-weight: 400;
+                text-shadow: 10px 10px 10px rgb(0, 0, 0);
+                text-transform: uppercase;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            }
+
+            .trusted_h3_gradient {
+                font-size: 72px;
+                font-weight: 700;
+            }
+        </style>
+        <div class="" style="position: relative;">
+            <div class="container py-5">
+                <div class="row ">
+                    <div class="col-12">
+                        <div class="py-5">
+
+                            <h3 data-aos="flip-left" class="text-center py-5 trusted_h3 aos-init aos-animate"> <i
+                                    class="fas fa-hospital fa-2x mb-4"></i> <br>Trusted <span class=""
+                                    style="color: #ffffff; font-weight: 500;;">Hoppitals</span>
+                            </h3>
+                        </div>
+                        <!--  -->
+                        <h3 data-aos="flip-left" class="symptom_heading">COVID-19 Symptoms</h3>
+                        <hr class="text-dark">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="symptom">
+                                    <h2 data-aos="fade-down-right">Fever</h2>
+                                    <p data-aos="fade-down-left">High body temperature, often accompanied by chills.</p>
+                                </div>
+                                <div class="symptom">
+                                    <h2 data-aos="fade-down-right">Cough</h2>
+                                    <p data-aos="fade-down-left">A dry or productive cough, sometimes with mucus.</p>
+                                </div>
+                                <div class="symptom">
+                                    <h2 data-aos="fade-down-right">Shortness of Breath</h2>
+                                    <p data-aos="fade-down-left">Difficulty breathing, especially when active.</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-6">
+                                <div class="symptom">
+                                    <h2 data-aos="flip-left">Fatigue</h2>
+                                    <p data-aos="flip-up">Feeling extremely tired or lethargic.</p>
+                                </div>
+                                <div class="symptom">
+                                    <h2 data-aos="flip-left">Loss of Taste or Smell</h2>
+                                    <p data-aos="flip-up">Not being able to taste or smell things.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+            </div>
+    </section>
+
+    <!-- about us -->
+    <section class="container-fluid bg-light py-5" id="about">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-4 mt-4">
+
+                    <img class="img-fluid"
+                        src="https://rsilpak.org/wp-content/uploads/2020/05/c0481846-wuhan_novel_coronavirus_illustration-spl-768x512.jpg"
+                        alt="">
+                </div>
+                <div class="col-lg-8 py-3">
+                    <h2>About Us</h2>
+                    <hr>
+                    <p style="text-align: justify;">
+                        At COVID-19 Test Center, our mission is to provide reliable and accessible COVID-19 testing
+                        services to help protect our community. We understand the importance of early detection and
+                        prevention in the fight against the pandemic.
+                    </p>
+                    <br>
+                    <p>
+                        Our dedicated team of healthcare professionals and technicians work tirelessly to ensure that you receive accurate test results in a timely manner. Your health and safety are our top priorities, and we follow the highest standards of safety and hygiene.
+                    </p>
+            <!-- <br>
+                    <p>
+                        Whether you need a PCR test for travel, a rapid antigen test for peace of mind, or any other COVID-19 testing service, we're here to assist you. Feel free to reach out to us with any questions or concerns you may have.
+                    </p> -->
+
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- services -->
+    <!-- <section class=" py-5" style="background-color: #f2f2f2;"> -->
+    <section class=" py-5" style="background-color: #175d69;" id="services">
+        <div class="container py-5 pt-3">
+            <style>
+                .card_services {
+                    background: white;
+                    padding: 50px 100px;
+                    text-align: center;
+                    /* box-sizing: 0px 0px 1px 10px black; */
+                    box-shadow: 5px 5px 10px 1px rgb(0, 0, 0);
+                    transform: 0.5s;
+                    /* transition: 0.5s ease; */
+                    border-radius: 20px;
+                }
+
+                .card_services:hover {
+                    background: #ff7171;
+                    padding: 50px 100px;
+                    text-align: center;
+                    /* box-sizing: 0px 0px 1px 10px black; */
+                    transition: 0.5s ease-in;
+                    box-shadow: -5px -5px 10px 1px rgb(0, 0, 0);
+                }
+
+                a {
+                    color: black;
+                    text-decoration: none;
+                }
+              
+            </style>
+            <h1 data-aos="fade-up" class="text-light">Our Services
+            </h1>
+            <hr class="text-light">
+            <div class="row mt-5">
+                <div class="col-lg-5">
+                    <div data-aos="fade-right" class="card_services">
+                        <a href>
+                            <i style="color: #FF6969;" class="fa-solid  fa-syringe fa-2x"></i>
+                            <hr>
+                            <h5 data-aos="fade-down"
+                                style="font-weight: 900; text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.47);">Covid-19 test
+                            </h5>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div data-aos="fade-right" class="card_services">
+                        <a style="" href>
+                            <i style="color: #FF6969;"  class="fa  fa-calendar fa-2x" aria-hidden="true"></i>
+                            <hr>
+                            <h5 data-aos="fade-left"
+                                style="font-weight: 900; text-shadow: 10px 10px 10px rgba(0, 0, 0, 0.47);">Schedule
+                                Vaccination
+                            </h5>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- statics -->
+    <section class="container-fluid bg-white">
+        <div class="container">
+
+            <style>
+                @import url(https://fonts.googleapis.com/css?family=PT+Sans+Narrow);
+
+
+
+                * {
+                    -webkit-box-sizing: border-box;
+                    -moz-box-sizing: border-box;
+                    box-sizing: border-box;
+                }
+
+                body,
+                div,
+                dl,
+                dt,
+                dd,
+                ul,
+                ol,
+                li,
+                h1,
+                h2,
+                h3,
+                h4,
+                h5,
+                h6,
+                pre,
+                form,
+                p,
+                blockquote,
+                th,
+                td {
+                    margin: 0;
+                    padding: 0;
+                    /* font-size: 13px; */
+                    direction: ltr;
+                }
+
+                .sectionClass {
+                    padding: 20px 0px 50px 0px;
+                    position: relative;
+                    display: block;
+                }
+
+                .fullWidth {
+                    width: 100% !important;
+                    display: table;
+                    float: none;
+                    padding: 0;
+                    min-height: 1px;
+                    height: 100%;
+                    position: relative;
+                }
+
+
+                .sectiontitle {
+                    background-position: center;
+                    margin: 0px 0 0px;
+                    text-align: center;
+                    min-height: 20px;
+                    color: white;
+                }
+
+                .sectiontitle h2 {
+                    font-size: 30px;
+                    color: #ffffff;
+                    margin-bottom: 0px;
+                    padding-right: 10px;
+                    padding-left: 10px;
+                }
+
+
+                .headerLine {
+                    width: 160px;
+                    height: 2px;
+                    display: inline-block;
+                    background: #a1a1a1;
+                }
+
+
+                .projectFactsWrap {
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                }
+
+
+                #projectFacts .fullWidth {
+                    padding: 0;
+                }
+
+                .projectFactsWrap .item {
+                    width: 25%;
+                    height: 100%;
+                    padding: 50px 0px;
+                    text-align: center;
+                }
+
+                .projectFactsWrap .item:nth-child(1) {
+                    background: #FF6969;
+                }
+
+                .projectFactsWrap .item:nth-child(2) {
+                    background: #ff6969ec;
+                }
+
+                .projectFactsWrap .item:nth-child(3) {
+                    background: #ff6969dc;
+                }
+
+                .projectFactsWrap .item:nth-child(4) {
+                    background: #ff6969cb;
+                }
+
+                .projectFactsWrap .item p.number {
+                    font-size: 40px;
+                    padding: 0;
+                    font-weight: bold;
+                }
+
+                .projectFactsWrap .item p {
+                    color: rgba(255, 255, 255, 0.8);
+                    font-size: 18px;
+                    margin: 0;
+                    padding: 10px;
+                    font-family: 'Open Sans';
+                }
+
+
+                .projectFactsWrap .item span {
+                    width: 60px;
+                    background: rgba(255, 255, 255, 0.8);
+                    height: 2px;
+                    display: block;
+                    margin: 0 auto;
+                }
+
+
+                .projectFactsWrap .item i {
+                    vertical-align: middle;
+                    font-size: 50px;
+                    color: rgba(255, 255, 255, 0.8);
+                }
+
+
+                .projectFactsWrap .item:hover i,
+                .projectFactsWrap .item:hover p {
+                    color: white;
+                }
+
+                .projectFactsWrap .item:hover span {
+                    background: white;
+                }
+
+                @media (max-width: 786px) {
+                    .projectFactsWrap .item {
+                        flex: 0 0 50%;
+                    }
+                }
+
+                /* AUTHOR LINK */
+
+
+
+                .about-me-img {
+                    width: 120px;
+                    height: 120px;
+                    left: 10px;
+                    /* bottom: 30px; */
+                    position: relative;
+                    border-radius: 100px;
+                }
+
+
+                .about-me-img img {}
+
+
+                .authorWindow {
+                    width: 600px;
+                    background: #75439a;
+                    padding: 22px 20px 22px 20px;
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
+
+                .authorWindowWrapper {
+                    display: none;
+                    left: 110px;
+                    top: 0;
+                    padding-left: 25px;
+                    position: absolute;
+                }
+
+                .trans {
+                    opacity: 1;
+                    -webkit-transform: translateX(0px);
+                    transform: translateX(0px);
+                    -webkit-transition: all 500ms ease;
+                    -moz-transition: all 500ms ease;
+                    transition: all 500ms ease;
+                }
+
+                @media screen and (max-width: 768px) {
+                    .authorWindow {
+                        width: 210px;
+                    }
+
+                    .authorWindowWrapper {
+                        bottom: -170px;
+                        margin-bottom: 20px;
+                    }
+
+                }
+            </style>
+            <div class="sectiontitle ">
+                <h2 class="pt-5 text-dark">statistics</h2>
+                <span class="headerLine"></span>
+            </div>
+            <div id="projectFacts" class="sectionClass">
+                <div class="fullWidth eight columns">
+                    <div class="projectFactsWrap ">
+                        <div class="item wow fadeInUpBig animated animated" data-number="{{$hosp}}"
+                            style="visibility: visible;">
+                            <i class="fa fa-hospital"></i>
+                            <p id="number1" class="number">{{$hosp}}</p>
+                            <span></span>
+                            <p>Hospitals</p>
+                        </div>
+
+                        <div class="item wow fadeInUpBig animated animated" data-number="{{$report}}"
+                            style="visibility: visible;">
+                            <i class="fa-solid fa-list"></i>
+                            <p id="number3" class="number">{{$report}}</p>
+                            <span></span>
+                            <p>No. of Total causes</p>
+                        </div>
+                        <div class="item wow fadeInUpBig animated animated" data-number="{{$positive}}"
+                            style="visibility: visible;">
+                            <i class="fa-solid fa-thumbs-up"></i>
+                            <p id="number3" class="number">{{$positive}}</p>
+                            <span></span>
+                            <p>No. of Postitve causes</p>
+                        </div>
+                        <div class="item wow fadeInUpBig animated animated" data-number="{{$negative}}"
+                            style="visibility: visible;">
+                            <i class="fa-solid fa-thumbs-down"></i>
+                            <p id="number4" class="number">{{$negative}}</p>
+                            <span></span>
+                            <p>No. of Negative causes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <script>
+
+            $.fn.jQuerySimpleCounter = function (options) {
+                var settings = $.extend({
+                    start: 0,
+                    end: 100,
+                    easing: 'swing',
+                    duration: 400,
+                    complete: ''
+                }, options);
+
+                var thisElement = $(this);
+
+                $({ count: settings.start }).animate({ count: settings.end }, {
+                    duration: settings.duration,
+                    easing: settings.easing,
+                    step: function () {
+                        var mathCount = Math.ceil(this.count);
+                        thisElement.text(mathCount);
+                    },
+                    complete: settings.complete
+                });
+            };
+
+
+            $('#number1').jQuerySimpleCounter({ end: {{$hosp}}, duration: 3000 });
+            $('#number2').jQuerySimpleCounter({ end: {{$report}}, duration: 3000 });
+            $('#number3').jQuerySimpleCounter({ end: {{$positive}}, duration: 2000 });
+            $('#number4').jQuerySimpleCounter({ end: {{$negative}}, duration: 2500 });
+
+
+
+            /* AUTHOR LINK */
+            $('.about-me-img').hover(function () {
+                $('.authorWindowWrapper').stop().fadeIn('fast').find('p').addClass('trans');
+            }, function () {
+                $('.authorWindowWrapper').stop().fadeOut('fast').find('p').removeClass('trans');
+            });
+
+        </script>
+    </section>
+
+    <!-- Contact us -->
+    <section data-aos="flip-left" id="contact" style="background-color: #ff7171;" class="container-fluid py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+
+                <h2 data-aos="zoom-in" style="font-family: Poppins, sans-serif; font-weight: 900;">Contact Us
+                </h2>
+                <p data-aos="zoom-in-up">Reach out to us for any inquiries or feedback.</p>
+            </div>
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-up" data-aos-anchor-placement="center-bottom">
+                    <p><i class="fas fa-map-marker-alt"></i>A-695, street no. 9, lucknow society,
+                        landhi road, Karachi, Pakistan</p>
+                    <p><i class="fas fa-envelope"></i> info@webberners.com
+                    </p>
+                    <p><i class="fas fa-phone"></i> +92 329 300 5959</p>
+                    <p><i class="fas fa-clock"></i> Monday - Friday: 9:00 AM - 5:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Saturday: 10:00 AM - 3:00 PM</p>
+                    <p><i class="fas fa-clock"></i> Sunday: Closed</p>
+                    <p><i class="fas fa-globe"></i> www.webberners.com</p>
+                </div>
+                <div class="col-lg-6">
+                    <style>
+                        .form-control {
+                            border-radius: 0%;
+                        }
+
+                        .P_btn_login {
+                            border-radius: 10px;
+                            /* padding: 0px 10px; */
+                            background: #000;
+                            border: 2px solid #FF6969;
+                            font-weight: 900;
+                            color: white;
+                            transform: skew(10deg);
+                            transition: 0.5s;
+                        }
+
+                        .P_btn_login:hover {
+                            border-radius: 10px;
+                            background: white;
+                            /* border: 20px solid #ffffff; */
+                            box-shadow: 0px 0px 50px 1px #FF6969;
+                            transform: scale(1.05) skew(0deg);
+                        }
+                    </style>
+                    <form data-aos="fade-left">
+                        <input class="form-control mb-4" type="text" placeholder="Name*" required>
+                        <input class="form-control mb-4" type="email" placeholder="Email*" required>
+                        <textarea class="form-control" placeholder="Message*" required></textarea>
+                        <button data-aos="zoom-in" class="btn P_btn_login mt-4 float-end" style id="submit"
+                            type="submit">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+
+</body>
+
+</html>
